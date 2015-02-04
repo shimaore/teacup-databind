@@ -1,6 +1,6 @@
 {
   "name": "teacup-databind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Teacup plugin to support Knockout(.js)",
   "main": "lib/teacup-databind.js",
   "scripts": {

@@ -6,6 +6,7 @@
 
     module.exports = (options) ->
       (teacup) ->
+        return if teacup.renderAttrWithoutKnockout?
         teacup.renderAttrWithoutKnockout = teacup.renderAttr
         teacup.renderAttr = (name,value) ->
           if name is 'bind' and typeof value is 'object'

@@ -34,3 +34,10 @@
               value: 'expect'
           , -> 'hello'
         html.should.equal '<div data-bind="component: foo, value: expect">hello</div>'
+
+      it 'should still work if registered twice', ->
+        teacup.use teacup_databind()
+        html = teacup.render ->
+          {input} = teacup
+          input name:'hello', value:'none'
+        html.should.equal '<input name="hello" value="none" />'
